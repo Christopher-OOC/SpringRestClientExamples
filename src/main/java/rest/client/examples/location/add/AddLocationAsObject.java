@@ -23,6 +23,8 @@ public class AddLocationAsObject {
 		newLocation.setCountryCode("IN");
 		newLocation.setCountryName("India");
 		
+		System.out.println(newLocation);
+		
 		HttpEntity<Location> request = new HttpEntity<>(newLocation);
 		
 		ResponseEntity<Location> response = restTemplate.postForEntity(requestURI, request, Location.class);
